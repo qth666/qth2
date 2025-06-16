@@ -16,7 +16,7 @@ st.set_page_config(
 # ------------------------- 2. 侧边栏实现多页面切换 -------------------------
 with st.sidebar:
     # 侧边栏显示图标
-    st.image('D:\\qth\\Chapter8_resources\\images/rigth_logo.png', width=100)  
+    st.image('images/rigth_logo.png', width=100)  
     st.title("请选择页面")  # 侧边栏标题
     # 页面选择下拉框，支持“简介页面”和“预测分类页面”
     page = st.selectbox(
@@ -37,7 +37,7 @@ if page == "简介页面":
     """)
     st.header("三种企鹅的卡通图像")
     # 展示企鹅卡通图
-    st.image('D:\\qth\\Chapter8_resources\\images/penguins.png')  
+    st.image('images/penguins.png')  
 
 
 # ------------------------- 4. 预测分类页面内容 -------------------------
@@ -143,10 +143,10 @@ elif page == "预测分类页面":
     with col_logo:
         if not submitted:
             # 未提交时显示默认图标
-            st.image('D:\\qth\\Chapter8_resources\\images/rigth_logo.png', width=300)
+            st.image('images/rigth_logo.png', width=300)
         else:
             # 提交后显示对应物种的图片
             st.image(
-                f'D:\\qth\\Chapter8_resources\\images/{predict_result_species}.png', 
+                f'images/{predict_result_species}.png', 
                 width=300
             )
